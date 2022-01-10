@@ -153,10 +153,23 @@ namespace ReLink {
             } else if (appId.Contains("Firefox")) {
                 browserType = BrowserType.Firefox;
                 browserName = "Firefox";
-            } else if (appId.Contains("Chrome")) {
-                browserType = BrowserType.Chrome;
+            }
+            else if (appId.Contains("ChromeSSHTM"))
+            {
+                browserName = "Chrome Canary";
+                browserType = BrowserType.ChromeCanary;
+            }
+            else if (appId == "ChromeHTML")
+            {
+                browserType = BrowserType.ChromeCurrent;
                 browserName = "Chrome";
-            } else if (appId.Contains("Opera")) {
+            }
+            else if (appId.Contains("Chrome"))
+            {
+                browserType = BrowserType.ChromeGeneric;
+                browserName = "Chrome (Generic)";
+            }
+            else if (appId.Contains("Opera")) {
                 browserType = BrowserType.Opera;
                 browserName = "Opera";
             } else if (appId.Contains("Safari")) {
